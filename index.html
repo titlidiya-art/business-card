@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Титова Лидия — вайб‑кодер</title>
+    <meta
+      name="description"
+      content="Титова Лидия — создаю сайты, ботов и digital-проекты с помощью ИИ."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #boot-help[hidden] {
+        display: none !important;
+      }
+      #boot-help:not([hidden]) {
+        display: block;
+      }
+      #boot-help {
+        min-height: 100vh;
+        margin: 0;
+        padding: 2rem;
+        box-sizing: border-box;
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        background: #050505;
+        color: #e8eef5;
+        line-height: 1.6;
+      }
+      #boot-help h1 {
+        font-family: 'Syne', sans-serif;
+        font-size: 1.6rem;
+        margin: 0 0 1rem;
+      }
+      #boot-help code {
+        background: rgba(255, 255, 255, 0.08);
+        padding: 0.15rem 0.45rem;
+        border-radius: 2px;
+      }
+      #boot-help ol {
+        padding-left: 1.2rem;
+      }
+      #boot-help li {
+        margin: 0.5rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="boot-help" hidden>
+      <h1>Визитку нельзя открыть двойным кликом по index.html</h1>
+      <p>Это React‑проект — ему нужен локальный сервер.</p>
+      <ol>
+        <li>Дважды нажмите файл <code>start.bat</code> в папке проекта</li>
+        <li>Или в терминале: <code>npm install</code>, затем <code>npm start</code></li>
+        <li>Откройте в браузере: <code>http://127.0.0.1:5173</code></li>
+      </ol>
+    </div>
+    <div id="root"></div>
+    <script>
+      if (location.protocol === 'file:') {
+        document.getElementById('boot-help').hidden = false;
+        document.getElementById('root').hidden = true;
+      }
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

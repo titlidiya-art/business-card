@@ -18,6 +18,12 @@ const EFFECT_OPTIONS = {
   movingAwaySpeed: [27, 36],
   movingCloserSpeed: [-54, -72],
   speedUp: 1,
+  colors: {
+    ...hyperspeedPresets.one.colors,
+    background: 0x12161c,
+    roadColor: 0x101318,
+    islandColor: 0x12161c,
+  },
 };
 
 
